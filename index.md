@@ -73,9 +73,9 @@ Czytelnik zastanawia się pewnie teraz „jak to możliwe, że ten artykuł prze
 
 Jeśli jednak chodzi o Recenzenta nr 2, mogę stwierdzić że artykuł Koutsoyiannisa i in. przeczytał pobieżnie i bez głębszego zrozumienia (a zaproponowana przez niego garść odnośników do zacytowania nie ma dużego związku z badanym problemem, co też sugeruje że nie był specjalistą), choć w jednym miejscu _zbliżył się_ do jednego z opisanych wyżej problemów, pytając czy oprócz wzrostu respiracji nie powinien też występować wzrost pochłaniania. W swojej odpowiedzi autorzy to potwierdzili, jednak nikt z nich nie zauważył sprzeczności, ani nie próbował ocenić wpływu zmian respiracji i pochłaniania dwutlenku węgla na wielkość i kierunek strumienia _netto_ biosfera-atmosfera. Recenzent nr 3 odpowiedzi autorów uznał za satysfakcjonujące i przyklepał akceptację publikacji.
 
---------
-Przypisy
-========
+
+**Przypisy**
+
 [^1]: https://www.mdpi.com/2413-4155/2/4/83
 [^2]: Co jest przyczyną zmian temperatury, według autorów nie jest do końca pewne, ale jako potencjalny najważniejszy czynnik wskazują oscylację atmosferyczno-oceaniczną ENSO, oraz zmiany zawartości ciepła w górnej wartwie oceanów. Co jest według nich przyczyną zmiany zawartości ciepła w górnej warstwie oceanów, już nie wiadomo.
 [^3]: https://essd.copernicus.org/articles/15/5301/2023/
