@@ -20,9 +20,9 @@ Fakt ten jest oczywiście klimatologom od dawna (prawie 50 lat) znany[^8], i z p
 
 I choć autorzy próbują zademonstrować, że metoda użyta w artykule działa poprawnie w przypadku danych syntetycznych, tzn. pokazuje, że w symulacjach numerycznych modeli klimatu to wzrost poziomu dwutlenku węgla powoduje wzrost temperatury, ich analiza jest ułomna ze względu na dobór danych. Uwzględnione przez nich symulacje nie pozwalały bowiem na swobodne wahania zawartości dwutlenku węgla w atmosferze, bo była ona z góry zadana jako warunki brzegowe eksperymentu[^11]. W konsekwencji, krótkookresowa korelacja temperatury i CO₂ była po prostu niemożliwa do wykazania: w symulacji temperatura mogła się zmieniać swobodnie, a CO₂ nie. Do tego typu testów autorzy powinni byli wybrać symulacje z eksperymentu *esm-hist* projektu C4MIP[^12], albo obliczać przyrosty CO₂ bezpośrednio z modelowanych strumieni ocean-atmosfera i ląd-atmosfera[^13]. Kolejnym błędem było użycie średniej z całej wiązki symulacji, oraz średnich rocznych — w ten sposób wyeliminowali naturalną krótkookresową zmienność klimatyczną i pozostawili same długoterminowe trendy. Nie jest więc dziwne, że ich metoda wykryła wyłącznie wpływ długoterminowego trendu wzrostowego dwutlenku węgla na długoterminowy trend wzrostowy temperatury.
 
-**Absurdalny jest też model przedstawiony przez Koutsoyiannisa i in. pod koniec artykułu (równanie 10).**
+**Absurdalne konsekwencje założeń autorów widać też na przykładzie modelu przedstawionego pod koniec artykułu (równanie 10).**
 
-$\Delta log(\mathrm{CO_2}) = \sum_{f=0}^{20} g_j \Delta T_{\tau-j} + \mu_\upsilon $
+![Capture](https://github.com/doskonaleszare/henoregg/assets/12494658/33bd5841-4b9c-4c3c-8d27-31b0a2f3e563)
 
 Zacznę od tego, że z niewiadomych powodów główną przewidywaną przez autorów zmienną jest logarytm z koncentracji dwutlenku węgla w atmosferze. Decyzja o użyciu logarytmu nie jest przekonująco wyjaśniona – autorzy piszą że „czasem się tak robi w ekonometrii”, a we wcześniejszym artykule dwóch z nich wspomina, że logarytm pojawia się we wzorze na wymuszenie radiacyjne dwutlenku węgla[^14]. Argument ten nie ma jednak sensu jeśli to temperatura ma regulować poziom CO₂, a nie na odwrót. Decyzja autorów jest tym bardziej niezrozumiała, że ten logarytm tak naprawdę niewiele zmienia[^15] i równie dobrze mógłby zostać pominięty, a tylko utrudnia fizyczną interpretację ich obliczeń (rys. 1).
 
@@ -36,16 +36,16 @@ Kolejnym wyborem dokonanym przez autorów jest wspomniane już różniczkowanie.
 
 *Rysunek 2: 12-miesięczne różnice pomiędzy wartościami koncentracji (panel górny) i logarytmu koncentracji (panel dolny) dwutlenku węgla.*
 
-Widoczny trend wzrostowy wynika z tego, że koncentracja dwutlenku węgla rośnie coraz szybciej[^16], więc pierwsza pochodna koncentracji ma coraz wyższą wartość. Szereg ten stanowi lewą stronę równań 8 i 10.
+Widoczny trend wzrostowy wynika z tego, że koncentracja dwutlenku węgla rośnie coraz szybciej[^16], więc pierwsza pochodna koncentracji ma coraz wyższą wartość. Szereg ten stanowi lewą stronę równania 10.
 Prawą stronę stanowi funkcja temperatury, która ma dwa składniki. Pierwszy z nich jest rodzajem średniej ważonej (wagi pokazano na rys. 3) z 20 wartości 12-miesięcznych różnic temperatury globalnej, które w praktyce „wygładzają” zróżniczkowaną temperaturę (rys. 4).
 
 ![ncep_weights](https://github.com/doskonaleszare/hennoregg/assets/12494658/3eee1cce-357d-4a1f-bbd7-57c05150fb14)
 
-*Rysunek 3: Wartości wag (jednostki umowne) pierwszej składowej równania 8 i 10 z artykułu Koutsoyiannisa i in.*
+*Rysunek 3: Wartości wag (jednostki umowne) pierwszej składowej równania 10 z artykułu Koutsoyiannisa i in.*
 
 ![ncep_smoothed](https://github.com/doskonaleszare/hennoregg/assets/12494658/72c9652f-148b-4242-b348-417285ca8c50)
 
-*Rysunek 4: 12-miesięczne różnice temperatury globalnej w reanalizie NCEP (panel górny), oraz wartości pierwszej składowej równania 8 i 10 (panel dolny).*
+*Rysunek 4: 12-miesięczne różnice temperatury globalnej w reanalizie NCEP (panel górny), oraz wartości pierwszej składowej równania 10 (panel dolny).*
 
 Ponieważ, jak wspomniałem, samo różniczkowanie usuwa długoterminowy trend, a w analizowanym okresie jest on liniowy (a zatem pierwsza pochodna jest w przybliżeniu stała), uzyskany szereg różnic temperatury nie rośnie. Był to dla autorów problem, bo psuł im korelację z szeregiem różnic poziomu CO₂. Dlatego też dodali do swojego modelu drugi składnik, który jest proporcjonalny do 4-letniej średniej anomalii globalnej temperatury, względem arbitralnie wyznaczonej wartości 285,84 kelwinów.  
 
@@ -59,7 +59,7 @@ Model ten nie ma więc większego sensu, i widać że ten dodatkowy składnik r�
 
 ![model_decomposition](https://github.com/doskonaleszare/hennoregg/assets/12494658/77c55096-4d39-49d2-b19b-f558fea3f768)
 
-*Rysunek 6: Dekompozycja modelu Koutsoyiannisa i in. Kolor szary oznacza wartości obserwowane, niebieski oznacza pierwszą składową, a czerwony drugą składową równań 8 i 10. Kolorem czarnym oznaczono ich sumę (kompletny model). Porównaj rys. 15 (panel górny) z artykułu Koutsoyiannisa i in.*
+*Rysunek 6: Dekompozycja modelu Koutsoyiannisa i in. Kolor szary oznacza wartości obserwowane, niebieski oznacza pierwszą składową, a czerwony drugą składową równania 10. Kolorem czarnym oznaczono ich sumę (kompletny model). Porównaj rys. 15 (panel górny) z artykułu Koutsoyiannisa i in.*
 
 Autorzy chwalą się, że model ten wyjaśnia (w statystycznym sensie wyjaśnionej wariancji) także zmiany koncentracji dwutlenku węgla w „imponujących 99,9%”. W rzeczywistości nie jest to takie imponujące, gdyż aby uzyskać z szeregu różnic wejściowy szereg CO₂, trzeba je do czegoś dodać, w tym przypadku, do pierwszych 12-miesięcznych wartości pochodzących z pomiarów. W ten sposób dodali do danych cykl sezonowy („ząbki” krzywej Keelinga) nieobecny w modelu, a który dodaje dużą część wyjaśnianej wariancji. Pozostała część niemal w całości wynika z trendu wzrostowego poziomu dwutlenku węgla, więc niemal taki sam wynik można byłoby uzyskać zastępując równania 8 i 10 zwykłą funkcją liniową, uzyskaną poprzez dopasowanie linii trendu do szeregu ΔCO₂ (rys. 7, panel górny). Wynik uzyskany przy pomocy takiego trywialnie prostego modelu, również wyjaśniającego ponad 99,9% zmienności poziomu CO₂, widać na rys. 7 (panel dolny).
 
@@ -69,10 +69,15 @@ Autorzy chwalą się, że model ten wyjaśnia (w statystycznym sensie wyjaśnion
 
 **Podsumowując, Koutsoyiannis i in. w swoim artykule odkryli zjawisko prawdziwe i dobrze znane klimatologom, po czym do jego analizy użyli niewłaściwych metod, dodali nonsensowną i niefizyczną interpretację, i wyciągnęli błędne wnioski, ignorując jednocześnie istniejący stan wiedzy i badania nad obiegiem węgla w przyrodzie przeprowadzone w ostatnich 50-60 latach.**
 
-Czytelnik zastanawia się pewnie teraz „jak to możliwe, że ten artykuł przeszedł peer-review”. Odpowiedzi mogą dostarczyć raporty recenzentów, które wraz z odpowiedziami autorów zostały opublikowane przez wydawcę czasopisma _Sci_. Okazuje się, że tylko jeden z nich (Recenzent nr 2) miał _jakiekolwiek_ uwagi do rękopisu. Dwaj pozostali tylko poklepali autorów po plecach i zarekomendowali publikację nawet bez kosmetycznych zmian.
+**Post-scriptum: peer-review i inne dygresje**
 
-Jeśli jednak chodzi o Recenzenta nr 2, mogę stwierdzić że artykuł Koutsoyiannisa i in. przeczytał pobieżnie i bez głębszego zrozumienia (a zaproponowana przez niego garść odnośników do zacytowania nie ma dużego związku z badanym problemem, co też sugeruje że nie był specjalistą), choć w jednym miejscu _zbliżył się_ do jednego z opisanych wyżej problemów, pytając czy oprócz wzrostu respiracji nie powinien też występować wzrost pochłaniania. W swojej odpowiedzi autorzy to potwierdzili, jednak nikt z nich nie zauważył sprzeczności, ani nie próbował ocenić wpływu zmian respiracji i pochłaniania dwutlenku węgla na wielkość i kierunek strumienia _netto_ biosfera-atmosfera. Recenzent nr 3 odpowiedzi autorów uznał za satysfakcjonujące i przyklepał akceptację publikacji.
+Czytelnik zastanawia się pewnie teraz, „jak to możliwe, że ten artykuł przeszedł peer-review”. Odpowiedzi mogą dostarczyć raporty recenzentów, które wraz z odpowiedziami autorów zostały opublikowane przez wydawcę czasopisma _Sci_. Okazuje się, że tylko jeden z nich (Recenzent nr 2) miał _jakiekolwiek_ uwagi do rękopisu. Dwaj pozostali tylko poklepali autorów po plecach i zarekomendowali publikację nawet bez kosmetycznych zmian.
 
+Jeśli jednak chodzi o Recenzenta nr 2, można w oparciu o jego recenzję stwierdzić że artykuł Koutsoyiannisa i in. przeczytał pobieżnie i bez głębszego zrozumienia, zaś zaproponowana przez niego garść odnośników do zacytowania — luźno związanych z badanym zagadnieniem  — sugeruje, że nie był specjalistą. W swojej recenzji artykułu tylko raz _zbliżył się_ do jednego z opisanych wyżej problemów, pytając czy oprócz wzrostu respiracji nie powinien też występować wzrost pochłaniania CO₂. W swojej odpowiedzi autorzy to potwierdzili, jednak nikt z nich nie zauważył sprzeczności, ani nie próbował ocenić wpływu zmian respiracji i pochłaniania dwutlenku węgla na wielkość i kierunek strumienia _netto_ biosfera-atmosfera. Recenzent nr 3 odpowiedzi autorów uznał za satysfakcjonujące i przyklepał akceptację publikacji.
+
+Recenzje były zatem pisane po łebkach, a dzięki przychylności członków redakcji Koutsoyiannis i in. nie musieli odpowiadać na trudne pytania w rodzaju: jak wytłumaczyć sprzeczność pomiędzy wnioskami ich artykułu a wynikami setek innych badań z ostatniego półwiecza. Decyzja o wysłaniu artykułu do czasopisma niespecjalistycznego jakim jest _Sci_ (a nie, powiedzmy, do _Tellus B_ czy _Global Geochemical Cycles_, które poświęcone są takim zagadnieniom jak obieg węgla w przyrodzie) jak podejrzewam też nie była przypadkowa. 
+
+Nie jest to oczywiście pierwsza historia tego typu, a Koutsoyiannis i in.[^21] nie są nawet pierwszymi denialistami, którzy na podstawie korelacji obliczanych ze zróżniczkowanych szeregów temperatury i dwutlenku węgla próbują podważyć rolę emisji antropogenicznych. Kilkanaście lat temu podobne pomysły mieli [Roy Spencer](https://www.drroyspencer.com/2009/05/global-warming-causing-carbon-dioxide-increases-a-simple-model/), [Lon Hocker](https://wattsupwiththat.com/2010/06/09/a-study-the-temperature-rise-has-caused-the-co2-increase-not-the-other-way-around/), a także amerykański klimatolog [Murry Salby](https://www.youtube.com/watch?v=YrI03ts--9I). Niby wszyscy wiedzą, że „correlation does not imply causation”, ale wystarczy pokazać dwie podobne krzywe komuś, kto _bardzo_ chce obalić teorię antropogenicznego globalnego ocieplenia, i po naukowym sceptycyzmie nie ma już żadnego śladu.
 
 **Przypisy**
 
@@ -96,3 +101,4 @@ Jeśli jednak chodzi o Recenzenta nr 2, mogę stwierdzić że artykuł Koutsoyia
 [^18]: Ponieważ średnia temperatura globalna okresu przedindustrialnego była wyższa niż przyjęty przez autorów krytyczny poziom. Por. https://journals.ametsoc.org/view/journals/bams/98/9/bams-d-16-0007.1.xml
 [^19]: https://doi.org/10.3189/172756402781816861
 [^20]: https://www.mdpi.com/2413-4155/5/3/35/review_report
+[^21]: Tak naprawdę, nie oszukujmy się, głównie Demetris Koutsoyiannis, bo to on jest głównym autorem wszystkich publikacji z cyklu „jajo czy kura”.
